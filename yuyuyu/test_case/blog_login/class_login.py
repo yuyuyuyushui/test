@@ -47,10 +47,12 @@ class blog(login):
         json3 = {"postId": postid}
         response_obj  = self.obj_sesion.post(url3, json=json3, verify=False)
         print(response_obj.json())
+
+
 if __name__ == "__main__":
-    url = "https://passport.cnblogs.com/user/signin"
+    url_1 = "https://passport.cnblogs.com/user/signin"
     payload = {
         "input1": "xxx", "input2": "xxx",
         "remember": True
     }
-    login_json = blog(url).login(payload)
+    login_json = blog(url_1).login(payload)
