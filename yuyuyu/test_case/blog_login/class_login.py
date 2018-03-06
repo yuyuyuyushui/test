@@ -25,7 +25,7 @@ class blog(login):
                参数1：title  # 标题
                参数2：body   # 中文
         '''
-        body = {"__VIEWSTATE": "",
+        body_ = {"__VIEWSTATE": "",
                 "__VIEWSTATEGENERATOR": "FE27D343",
                 "Editor$Edit$txbTitle": title,
                 "Editor$Edit$EditorBody": "<p>" + body_date + "</p>",
@@ -34,8 +34,8 @@ class blog(login):
                 "Editor$Edit$Advanced$chkComments": "on",
                 "Editor$Edit$Advanced$chkMainSyndication": "on",
                 "Editor$Edit$lkbDraft": "存为草稿",
-                }
-        response_obj = self.obj_sesion.post(self.url2, data=body, verify=False)
+                 }
+        response_obj = self.obj_sesion.post(self.url2, data=body_, verify=False)
         return response_obj.url
 
     def get_postid(self):
