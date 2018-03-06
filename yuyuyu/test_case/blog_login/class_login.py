@@ -50,9 +50,9 @@ class blog(login):
 
 
 if __name__ == "__main__":
-    url_1 = "https://passport.cnblogs.com/user/signin"
+    url_2 = "https://passport.cnblogs.com/user/signin"
     payload = {
         "input1": "xxx", "input2": "xxx",
         "remember": True
     }
-    login_json = blog(url_1).login(payload)
+    login_json = blog(url_2).login(payload)
