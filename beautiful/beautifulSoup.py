@@ -5,7 +5,7 @@ repose = requests.get("http://www.cnblogs.com/yoyoketang/")
 
 blog = repose.content
 
-soup = BeautifulSoup(blog, "html.parser")
+soup = BeautifulSoup(blog, "html.parser", from_encoding='utf-8')
 
 times = soup.find_all(class_="dayTitle")
 print(type(times))
