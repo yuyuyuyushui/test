@@ -2,6 +2,8 @@ import requests, re
 
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+
 class login:
     def __init__(self, url1):
         self.obj_sesion = requests.session()
@@ -14,6 +16,7 @@ class login:
         respose_obj = self.obj_sesion.post(self.url1, headers=headers, json=json_date)
         print(respose_obj.content)
         return respose_obj.json()
+
 
 class blog(login):
     def __init__(self, url2_save):
